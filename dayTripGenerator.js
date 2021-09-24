@@ -11,7 +11,7 @@ function randomDestinations(destinations){
 
 
 let dest = randomDestinations(destinations);
-console.log(dest);
+
 
 
 //random restaurants
@@ -25,7 +25,7 @@ function randomRestaurant(restaurant){
 }
     
 let rest = randomRestaurant(restaurant);
-console.log(rest);
+
 
 //random mode of transportation
 
@@ -38,7 +38,7 @@ function randomModeOfTransportation(modeOfTransportation){
 }
 
 let modeOfTrans = randomModeOfTransportation(modeOfTransportation);
-console.log(modeOfTrans);
+
     
 //random form of entertainment
 
@@ -50,8 +50,22 @@ function randomFormOfEntertainment(formOfEntertainment){
 }
 
 let formOfEnt = randomFormOfEntertainment(formOfEntertainment);
-console.log(formOfEnt);
+
 
 //confirm user likes randomized suggestions
 
+let generatedTripSuggestions = [rest, dest, modeOfTrans, formOfEnt]
 
+function generatedSuggestion(generatedTripSuggestions){
+let userInput = prompt("Do you like the randomly generated trip:" + ' ' + generatedTripSuggestions + "?")
+    if(userInput == "Yes" || userInput == "yes"){
+    alert("your trip has completed!" + " " + generatedTripSuggestions);
+    }    
+    else{
+    alert("Try Again!")
+    
+    }    
+}
+
+let myResult = generatedSuggestion(generatedTripSuggestions);
+console.log(myResult)
