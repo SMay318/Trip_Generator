@@ -52,20 +52,47 @@ function randomFormOfEntertainment(formOfEntertainment){
 let formOfEnt = randomFormOfEntertainment(formOfEntertainment);
 
 
-//confirm user likes randomized suggestions
 
-let generatedTripSuggestions = [rest, dest, modeOfTrans, formOfEnt]
+// randomly re select destination, restaurant, mode of transportation, and form of entertainment. Confirms whether trip is complete.
 
-function generatedSuggestion(generatedTripSuggestions){
-let userInput = prompt("Do you like the randomly generated trip:" + ' ' + generatedTripSuggestions + "?")
-    if(userInput == "Yes" || userInput == "yes"){
-    alert("your trip has completed!" + " " + generatedTripSuggestions);
-    }    
-    else{
-    alert("Try Again!")
-    
-    }    
+
+
+let userIsHappy = false
+
+while (userIsHappy === false) {
+    let userInput = prompt(`Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}. Press 5 if you are satisfied with your trip. Press 1 to change your destination. Press 2 to change your restaurant. Press 3 to change your mode of transportation. Press 4 to change your form of Entertainment.`)
+    if(userInput === "5"){
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
+        userIsHappy = true 
+    }
+    else if(userInput === "1"){
+        dest = randomDestinations(destinations);
+        alert(`Congrats! Your new destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
+        confirm("Are you satisfied with your new destination?")
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`)
+        userIsHappy = true
+    }
+    else if(userInput === "2"){
+        rest = randomRestaurant(restaurant) 
+        alert(`Congrats! Your destination is ${dest}. Your new restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
+        confirm("Are you satisfied with your new restaurant?")
+        alert(`Congrats! Your destination is ${dest}. Your new restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`)
+        userIsHappy = true
+    }   
+    else if(userInput === "3"){
+        modeOfTrans = randomModeOfTransportation(modeOfTransportation)
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your new mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
+        confirm("Are you satisfied with your new mode of Transportation?")
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`)
+        userIsHappy = true
+    }   
+    else if(userInput === "4"){
+        formOfEnt = randomFormOfEntertainment(formOfEntertainment)
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`);
+        confirm("Are you satisfied with your new form of entertainment?")
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`)
+        userIsHappy = true
+    }
+
+
 }
-
-let myResult = generatedSuggestion(generatedTripSuggestions);
-console.log(myResult)
