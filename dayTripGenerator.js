@@ -60,38 +60,43 @@ let formOfEnt = randomFormOfEntertainment(formOfEntertainment);
 let userIsHappy = false
 
 while (userIsHappy === false) {
-    let userInput = prompt(`Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}. Press 5 if you are satisfied with your trip. Press 1 to change your destination. Press 2 to change your restaurant. Press 3 to change your mode of transportation. Press 4 to change your form of Entertainment.`)
+    let userInput = prompt(`Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}. Press 1 to change your destination. Press 2 to change your restaurant. Press 3 to change your mode of transportation. Press 4 to change your form of Entertainment. Press 5 if you are satisfied with your trip.`)
     if(userInput === "5"){
         alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
         userIsHappy = true 
+        console.log(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
     }
     else if(userInput === "1"){
         dest = randomDestinations(destinations);
         alert(`Congrats! Your new destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
-        confirm("Are you satisfied with your new destination?")
-        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`)
+        confirm("Are you satisfied with your new destination?");
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
         userIsHappy = true
+        console.log(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
     }
     else if(userInput === "2"){
-        rest = randomRestaurant(restaurant) 
+        rest = randomRestaurant(restaurant); 
         alert(`Congrats! Your destination is ${dest}. Your new restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
-        confirm("Are you satisfied with your new restaurant?")
-        alert(`Congrats! Your destination is ${dest}. Your new restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`)
+        confirm("Are you satisfied with your new restaurant?");
+        alert(`Congrats! Your destination is ${dest}. Your new restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
         userIsHappy = true
+        console.log(`Congrats! Your destination is ${dest}. Your new restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
     }   
     else if(userInput === "3"){
-        modeOfTrans = randomModeOfTransportation(modeOfTransportation)
+        modeOfTrans = randomModeOfTransportation(modeOfTransportation);
         alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your new mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
-        confirm("Are you satisfied with your new mode of Transportation?")
-        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`)
+        confirm("Are you satisfied with your new mode of Transportation?");
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
         userIsHappy = true
+        console.log(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
     }   
     else if(userInput === "4"){
-        formOfEnt = randomFormOfEntertainment(formOfEntertainment)
+        formOfEnt = randomFormOfEntertainment(formOfEntertainment);
         alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`);
-        confirm("Are you satisfied with your new form of entertainment?")
-        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`)
+        confirm("Are you satisfied with your new form of entertainment?");
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`);
         userIsHappy = true
+        console.log(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`);
     }
 
 
