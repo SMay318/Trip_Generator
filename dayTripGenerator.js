@@ -94,9 +94,9 @@ while (userIsHappy === false) {
         formOfEnt = randomFormOfEntertainment(formOfEntertainment);
         alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`);
         confirm("Are you satisfied with your new form of entertainment?");
-        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`);
+        alert(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
         userIsHappy = true
-        console.log(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your new form of entertainment is ${formOfEnt}.`);
+        console.log(`Congrats! Your destination is ${dest}. Your restaurant is ${rest}. Your mode of Transportation is ${modeOfTrans}. Your form of entertainment is ${formOfEnt}.`);
     }
 
 
